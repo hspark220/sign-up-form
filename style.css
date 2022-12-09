@@ -4,11 +4,13 @@
     font-family: Nunito, serif;
 }
 
+
+/* 
+alignmnet
+*/
 body {
     display: flex;
-
 }
-
 .left {
     width: 50%;
     height: auto;
@@ -37,6 +39,9 @@ div.submit {
     width: 200px;
 }
 
+/* 
+forms styling
+*/
 button,
 input,
 select,
@@ -51,11 +56,16 @@ textarea {
 input {
     width: 250px;
     height: 30px;
+    
+    border: 1px solid;
+    border-radius: 5px;
 }
 button {
     width: 200px;
     height: 40px;
-
+    
+    border: 1px solid;
+    border-radius: 5px;
 }
 label, button {
     font-size: 1rem;
