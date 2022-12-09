@@ -23,12 +23,17 @@ body {
     border: solid;
     padding: 30px;
 }
+.forms {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
 fieldset {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     column-gap: 50px;
     row-gap: 20px;
+
+    border: 0;
 }
 .forms div {
     display: flex;
@@ -57,17 +62,42 @@ input {
     width: 250px;
     height: 30px;
     
-    border: 1px solid;
+    border: rgb(180, 178, 178) 1px solid;
     border-radius: 5px;
 }
 button {
     width: 200px;
     height: 40px;
     
-    border: 1px solid;
+    border: rgb(180, 178, 178) 1px solid;
     border-radius: 5px;
-}
-label, button {
+
     font-size: 1rem;
     font-weight: 700;
 }
+label {
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+/* 
+form validation styling?
+*/
+input:focus:invalid {
+    border-color: rgba(250, 0, 0, 0.45);
+}
+input:focus:valid {
+    border-color: rgba(0, 253, 0, 0.45);
+}
+input:focus {
+    outline: none;
+    border: rgba(0, 0, 255, 0.45) 2px solid;
+}
+input::placeholder, input:valid {
+    background-color:rgba(0, 253, 0, 0.2);
+    border-color: rgba(0, 253, 0, 0.45);
+}
+/* input::placeholder, input:invalid {
+    background-color:rgba(253, 0, 0, 0.2);
+    border-color: rgba(253, 0, 0, 0.45);
+} */
