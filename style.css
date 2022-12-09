@@ -83,21 +83,36 @@ label {
 /* 
 form validation styling?
 */
+input {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
 input:focus:invalid {
     border-color: rgba(250, 0, 0, 0.45);
 }
 input:focus:valid {
     border-color: rgba(0, 253, 0, 0.45);
+    
 }
 input:focus {
-    outline: none;
-    border: rgba(0, 0, 255, 0.45) 2px solid;
+    outline: 0;
+    border: 1px solid;
 }
-input::placeholder, input:valid {
+input:valid {
     background-color:rgba(0, 253, 0, 0.2);
     border-color: rgba(0, 253, 0, 0.45);
 }
-/* input::placeholder, input:invalid {
+input:invalid {
     background-color:rgba(253, 0, 0, 0.2);
     border-color: rgba(253, 0, 0, 0.45);
-} */
+}
+input:placeholder-shown {
+    background-color: #fff;
+    border: rgb(180, 178, 178) 1px solid;
+    
+}
+input::placeholder {
+    color:rgb(180, 178, 178);
+}
