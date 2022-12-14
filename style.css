@@ -37,7 +37,26 @@ header {
 }
 .sign-up h1 {
     text-align: center;
+    margin-bottom: 0;
 }
+
+.forms div {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+.forms .error-message{
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    text-align: center;
+}
+.error-message p{
+    color: rgb(243, 0, 0);
+    font-size: 01rem;
+    font-weight: 600;
+}
+
 fieldset {
     display: flex;
     flex-wrap: wrap;
@@ -46,11 +65,6 @@ fieldset {
     row-gap: 20px;
 
     border: 0;
-}
-.forms div {
-    display: flex;
-    flex-direction: column;
-    width: 250px;
 }
 div.submit {
     width: 200px;
