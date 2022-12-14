@@ -14,6 +14,10 @@ const confirmPassword = document.getElementById("confirm-password");
 
 confirmPassword.addEventListener('change', () => {
     if(password.value != confirmPassword.value) {
-        
+        confirmPassword.setCustomValidity("password doesn't match")
+        console.log(password.value)
+        console.log(confirmPassword.value)
+    } else {
+        confirmPassword.setCustomValidity("");
     }
 });
