@@ -27,14 +27,30 @@ errorDiv.appendChild(passwordError);
 
 password.addEventListener('change', () => {
     if(password.value.length < 8){
-        passwordError.textContent = "password needs to be atleast 8 characters long";
-    } else if (password.valueMissing) {
-        passwordError.textContent = "error";
-    }
-    
+        passwordError.textContent = "*password needs to be atleast 8 characters long";
+    } else if (!containsCapital(password.value)) {
+        passwordError.textContent = "*password needs a capital letter present";
+    } else if (!containsLower(password.value)) {
+        passwordError.textContent = "*password needs a lower case letter present";
+    } else if (!containsNumber(password.value)) {
+        passwordError.textContent = "*password must contain atleast one number";
+    } else if (!containsSpecialChars(password.value)) {
+        passwordError.textContent = "*password must contain special characters";
+    } 
+    console.log(containsLower(password.value));
 });
 
 const submit = document.querySelector('button');
 submit.addEventListener('click', () => {
 
 })
+
+// password validation checks
+const containsSpecialChars= (str) => {
+    const specialChars = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+    return specialChars.test(str);
+}
+
+const containsNumber = (str) => /\d/.test(str);
+const containsCapital = (str) => /[A-Z]/.test(str);
+const containsLower = (str) => /[a-z]/.test(str);
